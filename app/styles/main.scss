@@ -1,0 +1,52 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+$red: #FF4433;
+$green: #669922;
+
+body { 
+	background: $red;
+}
+
+input.input-small-inline { 
+  border: none;
+  width: 50px;
+  box-shadow: 0;
+  border-bottom: 1px black solid;
+}
+
+.progress {
+	position: relative;
+	background: lighten($red, 5);
+	min-height: 30px;
+	margin-bottom: 3px;
+
+	.progress-bar.progress-bar-danger { 
+		background-color: lighten($red, 10);
+	}
+
+	.overlay { 
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		height: 14px;
+		font-size: 12px;
+		line-height: 14px;
+		color: white;
+		a { 
+			color: rgba(white, .9);
+		}
+	}
+
+	&.progress-break { 
+		min-height: 6px;
+		height: 6px;
+		background: darken($red, 5);
+		margin-bottom: 20px;
+		.progress-bar.progress-bar-danger { 
+			background-color: darken($red, 10);
+		}	
+	}
+}
